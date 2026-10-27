@@ -1,3 +1,3 @@
 <div align="center">
-  <img src="./gitbanner.png" alt="whynicky" width="100%">
+  <img src="./banner.svg" alt="whynicky" width="100%">
 </div>
