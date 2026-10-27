@@ -6,10 +6,6 @@
 <feTurbulence type="fractalNoise" baseFrequency="1.6" numOctaves="1" seed="1" result="n"><animate attributeName="seed" values="1;4;7;2;9;5" dur=".6s" calcMode="discrete" repeatCount="indefinite"/></feTurbulence>
 <feColorMatrix type="matrix" values="0 0 0 0 .1  0 0 0 0 .1  0 0 0 0 .1  0 0 0 14 -7.6"/>
 </filter>
-<filter id="light" x="0" y="0" width="100%" height="100%">
-<feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="3"><animate attributeName="seed" values="3;8;1;6;2;10" dur=".6s" calcMode="discrete" repeatCount="indefinite"/></feTurbulence>
-<feColorMatrix type="matrix" values="0 0 0 0 .95  0 0 0 0 .95  0 0 0 0 .95  0 0 0 11 -6.3"/>
-</filter>
 <filter id="rough" x="-5%" y="-10%" width="110%" height="120%">
 <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="5" result="t"/>
 <feDisplacementMap in="SourceGraphic" in2="t" scale="3.5" xChannelSelector="R" yChannelSelector="G" result="d"/>
@@ -118,10 +114,11 @@ text{font-kerning:normal}
 }
 .s7{animation:s7 8.0s infinite}
 </style>
-<rect width="1600" height="533" fill="#fff"/>
-<rect width="1600" height="533" filter="url(#dark)" opacity=".7"/>
+<!-- Warm off-white sampled from the avatar instead of browser-white. -->
+<rect width="1600" height="533" fill="#f4f4f2"/>
+<!-- Keep the analogue grain, but soften it to match the avatar's paper-like background. -->
+<rect width="1600" height="533" filter="url(#dark)" opacity=".52"/>
 <rect class="plate" x="300" y="160" width="1000" height="213" fill="#000" filter="url(#rough)"/>
-<g clip-path="url(#plateClip)"><rect x="300" y="160" width="1000" height="213" filter="url(#light)" opacity=".22"/></g>
 <g clip-path="url(#c0)"><g class="s0"><use href="#w"/></g></g><g clip-path="url(#c1)"><g class="s1"><use href="#w"/></g></g><g clip-path="url(#c2)"><g class="s2"><use href="#w"/></g></g><g clip-path="url(#c3)"><g class="s3"><use href="#w"/></g></g><g clip-path="url(#c4)"><g class="s4"><use href="#w"/></g></g><g clip-path="url(#c5)"><g class="s5"><use href="#w"/></g></g><g clip-path="url(#c6)"><g class="s6"><use href="#w"/></g></g><g clip-path="url(#c7)"><g class="s7"><use href="#w"/></g></g>
 <g class="reg">
 <circle cx="1222" cy="238" r="25" fill="none" stroke="#fff" stroke-width="6"/>
